@@ -33,6 +33,10 @@ LOCAL_SHARED_LIBRARIES :=       \
         libui                   \
 
 LOCAL_MODULE := libstagefrighthw
+<<<<<<< HEAD
 LOCAL_MODULE_TAGS := optional
+=======
+
+>>>>>>> 7d8d81d3474a3605127222ce35cd1be78298b297
 include $(BUILD_SHARED_LIBRARY)
 

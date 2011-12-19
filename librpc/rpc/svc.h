@@ -31,7 +31,10 @@
  * svc.h, Server-side remote procedure call interface.
  *
  * Copyright (C) 1984, Sun Microsystems, Inc.
+<<<<<<< HEAD
  * Copyright (c) 2011, Code Aurora Forum.
+=======
+>>>>>>> 7d8d81d3474a3605127222ce35cd1be78298b297
  */
 
 #ifndef _RPC_SVC_H
@@ -86,6 +89,7 @@ struct svc_req {
 typedef void (*__dispatch_fn_t) (struct svc_req*, SVCXPRT*);
 #endif
 
+<<<<<<< HEAD
 
 /* Reset notifiction callback.
  *
@@ -97,6 +101,8 @@ typedef void (*svc_reset_notif_cb)
   enum rpc_reset_event event
 );
 
+=======
+>>>>>>> 7d8d81d3474a3605127222ce35cd1be78298b297
 /*
  * Transport registration.
  *
@@ -207,6 +213,7 @@ extern bool_t svc_freeargs(SVCXPRT *xdr, xdrproc_t xdr_args, caddr_t args_ptr);
 extern bool_t	svc_sendreply (SVCXPRT *xprt, xdrproc_t __xdr_results,
 			       caddr_t __xdr_location);
 
+<<<<<<< HEAD
 /*===========================================================================
 FUNCTION svc_register_reset_notification_cb
 
@@ -259,6 +266,8 @@ SIDE EFFECTS
 ===========================================================================*/
 extern svc_reset_notif_cb svc_unregister_reset_notification_cb(SVCXPRT *xprt);
 
+=======
+>>>>>>> 7d8d81d3474a3605127222ce35cd1be78298b297
 /*
  * Socket to use on svcxxx_create call to get default socket
  */

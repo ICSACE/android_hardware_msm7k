@@ -31,18 +31,24 @@
  * clnt.h - Client side remote procedure call interface.
  *
  * Copyright (C) 1984, Sun Microsystems, Inc.
+<<<<<<< HEAD
  * Copyright (c) 2011, Code Aurora Forum.
+=======
+>>>>>>> 7d8d81d3474a3605127222ce35cd1be78298b297
  */
 
 #ifndef _RPC_CLNT_H
 #define _RPC_CLNT_H 1
 
+<<<<<<< HEAD
 
 /*
  * By convention, procedure 0 takes null arguments and returns them
  */
 #define NULLPROC ((u_long)0)
 
+=======
+>>>>>>> 7d8d81d3474a3605127222ce35cd1be78298b297
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -100,12 +106,17 @@ enum clnt_stat {
    * asynchronous errors
    */
   RPC_INPROGRESS = 24,
+<<<<<<< HEAD
   RPC_STALERACHANDLE = 25,
   RPC_SUBSYSTEM_RESTART = 26
+=======
+  RPC_STALERACHANDLE = 25
+>>>>>>> 7d8d81d3474a3605127222ce35cd1be78298b297
 };
 
 struct CLIENT;
 typedef struct CLIENT CLIENT;
+<<<<<<< HEAD
 
 /* Reset notifiction callback.
  *
@@ -117,6 +128,8 @@ typedef void (*clnt_reset_notif_cb)
   enum rpc_reset_event event
 );
 
+=======
+>>>>>>> 7d8d81d3474a3605127222ce35cd1be78298b297
 /* client call callback. 
  * Callback called when the reply is recieved or there is an error in
  * getting reply.
@@ -137,6 +150,14 @@ typedef void (*clnt_call_non_blocking_cb)
   rpc_reply_header error
 );
 
+<<<<<<< HEAD
+=======
+/*
+ * By convention, procedure 0 takes null arguments and returns them
+ */
+#define NULLPROC ((rpcproc_t)0)
+
+>>>>>>> 7d8d81d3474a3605127222ce35cd1be78298b297
 /*===========================================================================
 FUNCTION CLNT_CALL
 
@@ -225,6 +246,7 @@ extern void clnt_destroy( CLIENT *xdr );
 extern CLIENT * clnt_create ( char * host, uint32 prog, uint32 vers,
                               char * proto);
 
+<<<<<<< HEAD
 /*===========================================================================
 FUNCTION clnt_register_reset_notification_cb
 
@@ -281,6 +303,8 @@ SIDE EFFECTS
 extern clnt_reset_notif_cb clnt_unregister_reset_notification_cb(CLIENT *client);
 
 
+=======
+>>>>>>> 7d8d81d3474a3605127222ce35cd1be78298b297
 #ifdef __cplusplus
 }
 #endif

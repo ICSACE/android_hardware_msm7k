@@ -85,6 +85,7 @@ extern bool_t xdr_recv_reply_header(xdr_s_type *xdr, rpc_reply_header *reply);
 #include <stdio.h>
 
 static bool_t xdr_std_msg_send(xdr_s_type *xdr)
+<<<<<<< HEAD
 {
     int ret;
 
@@ -92,6 +93,12 @@ static bool_t xdr_std_msg_send(xdr_s_type *xdr)
     ret = r_write(xdr->fd, (void *)xdr->out_msg, xdr->out_next);
     xdr->xdr_err = ret;
     if ( ret != xdr->out_next)
+=======
+{  
+    /* Send the RPC packet. */
+    if (r_write(xdr->fd, (void *)xdr->out_msg, xdr->out_next) !=
+            xdr->out_next)
+>>>>>>> 7d8d81d3474a3605127222ce35cd1be78298b297
         return FALSE;
         
     return TRUE;

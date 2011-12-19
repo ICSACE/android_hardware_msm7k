@@ -38,21 +38,32 @@
 #endif
 
 #ifdef DEBUG
+<<<<<<< HEAD
 #define D(x...) PRINT(x...)
+=======
+#define D PRINT
+>>>>>>> 7d8d81d3474a3605127222ce35cd1be78298b297
 #else
 #define D(x...) do { } while(0)
 #endif
 
 #ifdef VERBOSE
+<<<<<<< HEAD
 #define V(x...) PRINT(x...)
+=======
+#define V PRINT
+>>>>>>> 7d8d81d3474a3605127222ce35cd1be78298b297
 #else
 #define V(x...) do { } while(0)
 #endif
 
+<<<<<<< HEAD
 #define LIBRPC_DEBUG(x...) do { \
         SLOGD(x);               \
     } while(0)
 
+=======
+>>>>>>> 7d8d81d3474a3605127222ce35cd1be78298b297
 #define E(x...) do {                                        \
         fprintf(stderr, "%s(%d) ", __FUNCTION__, __LINE__); \
         fprintf(stderr, ##x);                               \
@@ -63,7 +74,11 @@
         if (__builtin_expect (cond, 0)) {                                      \
             fprintf(stderr, "%s:%s:(%d): ", __FILE__, __FUNCTION__, __LINE__); \
             fprintf(stderr, ##msg);                                            \
+<<<<<<< HEAD
         	LOGE(msg);                                            \
+=======
+            LOGE(msg);                                                         \
+>>>>>>> 7d8d81d3474a3605127222ce35cd1be78298b297
         }                                                                      \
     } while(0)
 

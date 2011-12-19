@@ -31,7 +31,11 @@
 /*
  * Rpc additions to <sys/types.h>
  */
+<<<<<<< HEAD
 /* Copyright (c) 2011, Code Aurora Forum. */
+=======
+
+>>>>>>> 7d8d81d3474a3605127222ce35cd1be78298b297
 #ifndef RPCXDRTYPES_H
 #define RPCXDRTYPES_H
 
@@ -384,7 +388,11 @@ typedef struct xdr_ops_struct xdr_ops_s_type;
   for servers.
   ===========================================================================*/
 
+<<<<<<< HEAD
 #define RPCROUTER_MSGSIZE_MAX (18432)
+=======
+#define RPCROUTER_MSGSIZE_MAX (2048)
+>>>>>>> 7d8d81d3474a3605127222ce35cd1be78298b297
 
 struct xdr_struct {
   const xdr_ops_s_type      *xops;
@@ -412,7 +420,10 @@ struct xdr_struct {
   uint8                      in_msg[RPCROUTER_MSGSIZE_MAX];
   int                        in_next;
   int                        in_len;
+<<<<<<< HEAD
   int                        xdr_err;
+=======
+>>>>>>> 7d8d81d3474a3605127222ce35cd1be78298b297
 };
 
 // Transport flag definitions
@@ -431,6 +442,7 @@ typedef struct rpc_cb_data_type {
   oncrpc_addr_type           cb_source;
 } rpc_cb_data_type;
 
+<<<<<<< HEAD
 
 /* Events returned by the server and clients when a reset event occurs.
  */
@@ -439,6 +451,8 @@ enum rpc_reset_event {
   RPC_SUBSYSTEM_RESTART_END
 };
 
+=======
+>>>>>>> 7d8d81d3474a3605127222ce35cd1be78298b297
 #ifdef __cplusplus
 }
 #endif

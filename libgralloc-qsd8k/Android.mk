@@ -33,7 +33,11 @@ LOCAL_SRC_FILES := 	\
 	mapper.cpp		\
 	pmemalloc.cpp
 	
+<<<<<<< HEAD
 LOCAL_MODULE := gralloc.qsd8k
+=======
+LOCAL_MODULE := gralloc.$(TARGET_BOARD_PLATFORM)
+>>>>>>> 7d8d81d3474a3605127222ce35cd1be78298b297
 LOCAL_CFLAGS:= -DLOG_TAG=\"$(TARGET_BOARD_PLATFORM).gralloc\"
 include $(BUILD_SHARED_LIBRARY)
 
